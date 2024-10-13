@@ -13,7 +13,7 @@ public class Main {
         animals[6] = new Animal("Tero", 8, "Cat");
 
         //Creating an object for Environment Class
-        Environment savaana = new Environment("Summer", "Sunny");
+        Environment savanna = new Environment("Summer", "Sunny");
 
         // Looping through the array to display details and simulate movement
         for (int i = 0; i < animals.length; i++) {
@@ -23,22 +23,30 @@ public class Main {
             System.out.println();  // Blank line for better readability
         }
 
+        //Using setter methods to update an animal's details
+        animals[0].setName("Simba");
+        animals[0].setAge(6);
+        animals[0].setSpecies("Panther");
+
+        System.out.println("After updating first animal:");
+        animals[0].displayDetails();
+        animals[0].move();
+        System.out.println();  // Blank line for better readability
+
+        //Using Environment object to display details and simulate season change
+        savanna.displayEnvironment();
+        savanna.changeSeason("Rainy");
+        savanna.changeSeason("Winter");
+
+        System.out.println();  // Blank line for better readability
+
         //Display static variable animalCount after creating all the animals
         System.out.println("Total number of animals: " + Animal.getAnimalCount());
 
         //Display unique species count
         System.out.println("Total number of unique species: " + Animal.getUniqueSpecies());
 
-        System.out.println();  // Blank line for better readability
-
-        //Using Environment object to display details and simulate season change
-        savaana.displayEnvironment();
-        savaana.changeSeason("Rainy");
-        savaana.changeSeason("Winter");
-
-        System.out.println();  // Blank line for better readability
-
         //Display the static variable totalSeasons
-        System.out.println("Total season changes across all the environment: " + Environment.getTotalSeasons());
+        System.out.println("Total season changes across all environments: " + Environment.getTotalSeasons());
     }
 }

@@ -1,10 +1,10 @@
-import java.util.*;
+import java.util.HashSet;
 
 public class Animal {
-    //Attributes
-    private final String name;
-    private final int age;
-    private final String species;
+    //Attributes - encapsulated as private
+    private String name;
+    private int age;
+    private String species;
 
     //Static HashSet to track unique species
     private static final HashSet<String> uniqueSpecies = new HashSet<>();
@@ -20,16 +20,42 @@ public class Animal {
         uniqueSpecies.add(species);     //Adding species to the HashSet, only unique species will be added
     }
 
+    //Getter methods (Accessors)
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    //Setter methods (Mutators)
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
+    }
+
     //Member function to display animal's details
     public void displayDetails() {
-        System.out.println("Animal Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Species: " + species);
+        System.out.println("Animal Name: " + getName());
+        System.out.println("Age: " + getAge());
+        System.out.println("Species: " + getSpecies());
     }
 
     //Member function to simulate animal movement
     public void move() {
-        System.out.println(name + " the " + species + " is moving.");
+        System.out.println(name + " the " + getSpecies() + " is moving.");
     }
 
     //Static method to get the total number of animals created
