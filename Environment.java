@@ -1,5 +1,5 @@
 public class Environment {
-    //Attributes
+    //Attributes - encapsulated as private
     private String season;
     private final String weather;
 
@@ -12,10 +12,24 @@ public class Environment {
         this.weather = weather;
     }
 
+    //Getter methods (Accessors)
+    public String getSeason() {
+        return season;
+    }
+
+    public String getWeather() {
+        return weather;
+    }
+
+    //Setter methods (Mutators)
+    public void setSeason(String season) {
+        this.season = season;
+    }
+
     //Member function to display the current environment details
     public void displayEnvironment() {
-        System.out.println("Current Season: " + season);
-        System.out.println("Current Weather: " + weather);
+        System.out.println("Current Season: " + getSeason());
+        System.out.println("Current Weather: " + getWeather());
     }
 
     //Static method to get the total number of season changes
@@ -25,8 +39,8 @@ public class Environment {
 
     //Member function to simulate the change in environment
     public void changeSeason(String newSeason) {
-        season = newSeason;
+        setSeason(newSeason);       //Use the setter method to change the season
         totalSeasons++;             //Incrementing total season count when the season changes
-        System.out.println("The season has changed to " + season + ".");
+        System.out.println("The season has changed to " + getSeason() + ".");
     }
 }
