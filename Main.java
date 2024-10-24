@@ -4,16 +4,17 @@ public class Main {
         Animal[] animals = new Animal[7];   //Array to store 7 Animal objects
 
         //Instantiating Animal objects and storing them in an array
-        animals[0] = new Animal("Leo", 5, "Lion");
-        animals[1] = new Animal("Zara", 3, "Zebra");
-        animals[2] = new Animal("Ella", 2, "Elephant");
-        animals[3] = new Animal("Asteroid Destroyer", 1, "Cat");
-        animals[4] = new Animal("Bob", 2, "Rhinoceros");
-        animals[5] = new Animal("Mike", 1, "Rhinoceros");
-        animals[6] = new Animal("Tero", 8, "Cat");
+        animals[0] = new Lion("Leo", 5);
+        animals[1] = new Zebra("Zara", 3);
+        animals[2] = new Elephant("Ella", 2);
+        animals[3] = new Cat("Asteroid Destroyer", 1);
+        animals[4] = new Rhinoceros("Bob", 2);
+        animals[5] = new Rhinoceros("Mike", 1);
+        animals[6] = new Cat("Tero", 8);
 
-        //Creating an object for Environment Class
-        Environment savanna = new Environment("Summer", "Sunny");
+        //Creating environment objects for different details
+        Environment savanna = new Savanna("Summer", "Sunny");
+        Environment rainforest = new Rainforest("Monsoon", "Humid");
 
         // Looping through the array to display details and simulate movement
         for (int i = 0; i < animals.length; i++) {
@@ -38,6 +39,12 @@ public class Main {
         savanna.changeSeason("Rainy");
         savanna.changeSeason("Winter");
 
+        System.out.println();  // Blank line for better readability
+
+        rainforest.displayEnvironment();
+        rainforest.changeSeason("Dry");
+        rainforest.changeSeason("Monsoon");
+        
         System.out.println();  // Blank line for better readability
 
         //Display static variable animalCount after creating all the animals

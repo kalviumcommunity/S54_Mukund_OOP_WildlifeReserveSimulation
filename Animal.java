@@ -1,6 +1,6 @@
 import java.util.HashSet;
 
-public class Animal {
+public abstract class Animal {
     //Attributes - encapsulated as private
     private String name;
     private int age;
@@ -54,9 +54,7 @@ public class Animal {
     }
 
     //Member function to simulate animal movement
-    public void move() {
-        System.out.println(name + " the " + getSpecies() + " is moving.");
-    }
+    public abstract void move();
 
     //Static method to get the total number of animals created
     public static int getAnimalCount() {
