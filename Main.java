@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         //Creating an array of Animal objects
-        Animal[] animals = new Animal[7];   //Array to store 7 Animal objects
+        Animal[] animals = new Animal[8];   //Array to store 7 Animal objects
 
         //Instantiating Animal objects and storing them in an array
         animals[0] = new Lion("Leo", 5);
@@ -11,10 +11,12 @@ public class Main {
         animals[4] = new Rhinoceros("Bob", 2);
         animals[5] = new Rhinoceros("Mike", 1);
         animals[6] = new Cat("Tero", 8);
+        animals[7] = new Zebra();
 
         //Creating environment objects for different details
         Environment savanna = new Savanna("Summer", "Sunny");
         Environment rainforest = new Rainforest("Monsoon", "Humid");
+        Environment defaultRainforest = new Rainforest();
 
         // Looping through the array to display details and simulate movement
         for (int i = 0; i < animals.length; i++) {
@@ -44,7 +46,10 @@ public class Main {
         rainforest.displayEnvironment();
         rainforest.changeSeason("Dry");
         rainforest.changeSeason("Monsoon");
-        
+
+        System.out.println();  // Blank line for better readability
+
+        defaultRainforest.displayEnvironment();
         System.out.println();  // Blank line for better readability
 
         //Display static variable animalCount after creating all the animals

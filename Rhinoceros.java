@@ -3,6 +3,10 @@ public class Rhinoceros extends Animal {
         super(name, age, "Rhinoceros");
     }
 
+    public Rhinoceros() {
+        super();
+    }
+
     @Override
     public void move() {
         System.out.println(getName() + " the rhinoceros is galloping.");
