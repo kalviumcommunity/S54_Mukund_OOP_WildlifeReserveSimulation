@@ -3,6 +3,10 @@ public class Elephant extends Animal {
         super(name, age, "Elephant");
     }
 
+    public Elephant() {
+        super();
+    }
+
     @Override
     public void move() {
         System.out.println(getName() + " the elephant is walking slowly.");

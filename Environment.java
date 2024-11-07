@@ -6,10 +6,16 @@ public abstract class Environment {
     //Static variable to track total number of seasons changed across all the environments
     protected static int totalSeasons = 0;
 
-    //Constructor
+    //Parameterized Constructor
     public Environment(String season, String weather) {
         this.season = season;
         this.weather = weather;
+    }
+
+    //Default Constructor
+    public Environment() {
+        this.season = "Spring";
+        this.weather = "Mild";
     }
 
     //Getter methods (Accessors)

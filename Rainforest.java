@@ -3,6 +3,10 @@ public class Rainforest extends Environment {
         super(season, weather);
     }
 
+    public Rainforest() {
+        super();
+    }
+
     @Override
     public void displayEnvironment() {
         System.out.println("Environment: Rainforest");

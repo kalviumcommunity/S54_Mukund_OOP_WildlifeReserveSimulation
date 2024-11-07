@@ -3,6 +3,10 @@ public class Savanna extends Environment {
         super(season, weather);
     }
 
+    public Savanna() {
+        super();
+    }
+
     @Override
     public void displayEnvironment() {
         System.out.println("Environment: Savanna");

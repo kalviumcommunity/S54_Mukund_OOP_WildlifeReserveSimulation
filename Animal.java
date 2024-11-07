@@ -11,13 +11,20 @@ public abstract class Animal {
     //Static Variable to keep track of total number of animals created
     private static int animalCount = 0;
 
-    //Constructor
+    //Parameterized Constructor
     public Animal(String name, int age, String species) {
         this.name = name;
         this.age = age;
         this.species = species;
         animalCount++;                  //Incrementing animal count when a new animal is created
         uniqueSpecies.add(species);     //Adding species to the HashSet, only unique species will be added
+    }
+
+    //Default Constructor
+    public Animal() {
+        this.name = "Unknown";
+        this.age = 0;
+        this.species = "Unknown";
     }
 
     //Getter methods (Accessors)
