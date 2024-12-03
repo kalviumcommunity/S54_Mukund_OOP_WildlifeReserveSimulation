@@ -4,11 +4,11 @@ public class Elephant extends Animal {
     }
 
     public Elephant() {
-        super();
+        super("Default Elephant", 10, "Elephant");
     }
 
     @Override
     public void move() {
-        System.out.println(getName() + " the elephant is walking slowly.");
+        System.out.println(getName() + " the elephant is lumbering through the jungle.");
     }
 }

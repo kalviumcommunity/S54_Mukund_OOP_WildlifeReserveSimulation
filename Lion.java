@@ -1,14 +1,17 @@
 public class Lion extends Animal {
-    public Lion(String name, int age) {
+    private final MovementBehavior movementBehavior;
+
+    public Lion(String name, int age, MovementBehavior movementBehavior) {
         super(name, age, "Lion");
+        this.movementBehavior = movementBehavior;
     }
 
     public Lion() {
-        super();
+        this("Unknown", 0, new WalkBehavior());
     }
 
     @Override
     public void move() {
-        System.out.println(getName() + " the lion is moving.");
+        movementBehavior.move(getName());
     }
 }
