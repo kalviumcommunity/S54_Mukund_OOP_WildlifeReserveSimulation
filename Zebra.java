@@ -4,11 +4,11 @@ public class Zebra extends Animal {
     }
 
     public Zebra() {
-        super();
+        super("Default Zebra", 3, "Zebra");
     }
 
     @Override
     public void move() {
-        System.out.println(getName() + " the zebra is running.");
+        System.out.println(getName() + " the zebra is galloping across the savanna.");
     }
 }

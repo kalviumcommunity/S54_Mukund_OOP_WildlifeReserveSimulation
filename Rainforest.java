@@ -16,8 +16,8 @@ public class Rainforest extends Environment {
 
     @Override
     public void changeSeason(String newSeason) {
-        this.season = newSeason; // Use the setter method to change the season
-        totalSeasons++;          // Incrementing total season count when the season changes
+        setSeason(newSeason);
+        totalSeasons++;
         System.out.println("The season in the Rainforest has changed to " + getSeason() + ".");
     }
 }

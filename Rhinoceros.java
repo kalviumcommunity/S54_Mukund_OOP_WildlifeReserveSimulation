@@ -4,11 +4,11 @@ public class Rhinoceros extends Animal {
     }
 
     public Rhinoceros() {
-        super();
+        super("Default Rhino", 8, "Rhinoceros");
     }
 
     @Override
     public void move() {
-        System.out.println(getName() + " the rhinoceros is galloping.");
+        System.out.println(getName() + " the rhinoceros is charging mightily.");
     }
 }
